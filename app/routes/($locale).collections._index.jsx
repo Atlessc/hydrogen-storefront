@@ -1,6 +1,7 @@
 import {useLoaderData, Link} from '@remix-run/react';
 import {json} from '@shopify/remix-oxygen';
 import {Pagination, getPaginationVariables, Image} from '@shopify/hydrogen';
+import '../styles/app.css';
 
 export async function loader({context, request}) {
   const paginationVariables = getPaginationVariables(request, {
@@ -19,7 +20,7 @@ export default function Collections() {
 
   return (
     <div className="collections">
-      <h1>Collections</h1>
+      <h1 className='section-heading'>Collections</h1>
       <Pagination connection={collections}>
         {({nodes, isLoading, PreviousLink, NextLink}) => (
           <div>

@@ -2,6 +2,7 @@ import {defer} from '@shopify/remix-oxygen';
 import {Await, useLoaderData, Link} from '@remix-run/react';
 import {Suspense} from 'react';
 import {Image, Money} from '@shopify/hydrogen';
+import '../styles/app.css';
 
 export const meta = () => {
   return [{title: 'Hydrogen | Home'}];
@@ -20,7 +21,10 @@ export default function Homepage() {
   const data = useLoaderData();
   return (
     <div className="home">
-      <FeaturedCollection collection={data.featuredCollection} />
+      <div className="home-hero">
+        <p>Level up your skills a quick Boost<br/><br/>We'll help you get where you need to be</p>
+        <FeaturedCollection collection={data.featuredCollection} />
+      </div>
       <RecommendedProducts products={data.recommendedProducts} />
     </div>
   );
@@ -38,7 +42,6 @@ function FeaturedCollection({collection}) {
           <Image data={image} sizes="100vw" />
         </div>
       )}
-      <h1>{collection.title}</h1>
     </Link>
   );
 }
@@ -46,7 +49,7 @@ function FeaturedCollection({collection}) {
 function RecommendedProducts({products}) {
   return (
     <div className="recommended-products">
-      <h2>Recommended Products</h2>
+      <h1 className="section-heading">Recommended Products</h1>
       <Suspense fallback={<div>Loading...</div>}>
         <Await resolve={products}>
           {({products}) => (
