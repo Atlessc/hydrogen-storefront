@@ -1,13 +1,4 @@
-/**
- * A side bar component with Overlay that works without JavaScript.
- * @example
- * ```ts
- * <Aside id="search-aside" heading="SEARCH">`
- *  <input type="search" />
- *  ...
- * </Aside>
- * ```
- */
+
 export function Aside({children, heading, id = 'aside'}) {
   return (
     <div aria-modal className="overlay" id={id} role="dialog">
@@ -17,7 +8,10 @@ export function Aside({children, heading, id = 'aside'}) {
           history.go(-1);
           window.location.hash = '';
         }}
-      />
+        title="Close aside"
+      >
+        &times;
+      </button>
       <aside>
         <header>
           <h3>{heading}</h3>
