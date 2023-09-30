@@ -1,6 +1,7 @@
 import {json} from '@shopify/remix-oxygen';
 import {Link, useLoaderData} from '@remix-run/react';
 import {Pagination, getPaginationVariables} from '@shopify/hydrogen';
+import '../styles/app.css';
 
 export const meta = () => {
   return [{title: `Hydrogen | Blogs`}];

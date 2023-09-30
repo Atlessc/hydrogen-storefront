@@ -232,7 +232,7 @@ function ProductOptions({option}) {
               replace
               to={to}
               style={{
-                border: isActive ? '1px solid black' : '1px solid transparent',
+                border: isActive ? '1px solid #058511' : '1px solid transparent',
                 opacity: isAvailable ? 1 : 0.3,
               }}
             >

@@ -139,7 +139,8 @@ aside li {
 */
 .header {
   align-items: center;
-  background: #000000;
+  background: #242424;
+  border-bottom: #fff 1px solid;
   display: flex;
   height: var(--header-height);
   padding: 0 2.5rem;
@@ -173,7 +174,29 @@ aside li {
 .header-menu-item {
   cursor: pointer;
   padding: 0.5rem;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  transition: all 150ms ease-in-out;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+}
 
+.header-menu-item:hover {
+  background: white;
+  color: black !important;
+  border: 2px solid black;
+  box-shadow:  0 4px 0px #058511;
+  transform: translateY(-4px);
+  -webkit-transform: translateY(-4px);
+  -moz-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  -o-transform: translateY(-4px);
 }
 
 .header-ctas {
@@ -181,6 +204,39 @@ aside li {
   display: flex;
   grid-gap: 1rem;
   margin-left: auto;
+}
+
+.header-ctas-button {
+  padding: 0.5rem;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  box-shadow:  0 0px 0px #058511;
+  transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transition: all 150ms ease-in-out;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+}
+
+.header-ctas-button:hover {
+  background: white;
+  color: black !important;
+  border: 2px solid black;
+  box-shadow:  0 4px 0px #058511;
+  transform: translateY(-4px);
+  -webkit-transform: translateY(-4px);
+  -moz-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  -o-transform: translateY(-4px);
 }
 
 /*
@@ -410,8 +466,9 @@ aside li {
   }
 }
 
-.product h1 {
+.product h1, .product h5 {
   margin-top: 0;
+  color: #fff;
 }
 
 .product-images {
@@ -430,13 +487,21 @@ aside li {
   top: 6rem;
 }
 
+.product-price {
+  color: #fff;
+  border-bottom: 2px solid #058511;
+  width: fit-content;
+}
+
 .product-price-on-sale {
   display: flex;
   grid-gap: 0.5rem;
+  color: #fff;
 }
 
 .product-price-on-sale s {
   opacity: 0.5;
+  color: #fff;
 }
 
 .product-options-grid {
@@ -447,6 +512,51 @@ aside li {
 
 .product-options-item {
   padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: all 150ms ease-in-out;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.product-options-item:hover {
+  background: white;
+  color: black !important;
+  box-shadow:  0 4px 0px #058511;
+  transform: translateY(-4px);
+  -webkit-transform: translateY(-4px);
+  -moz-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  -o-transform: translateY(-4px);
+}
+
+.product-form form {
+  color: white;
+  font-weight: bolder;
+  padding: 0.5rem 0.7rem;
+  border-radius: 4px;
+  border: 1px solid white;
+  transition: all 150ms ease-in-out;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+}
+
+.product-form form:hover {
+  background: white;
+  color: black !important;
+  box-shadow:  0 4px 0px #058511;
+  transform: translateY(-4px);
+  -webkit-transform: translateY(-4px);
+  -moz-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  -o-transform: translateY(-4px);
 }
 
 /*
@@ -454,6 +564,11 @@ aside li {
 * routes/blog._index.tsx
 * --------------------------------------------------
 */
+
+.blogs h1 {
+  color: #fff;
+}
+
 .blog-grid {
   display: grid;
   grid-gap: 1.5rem;
@@ -475,6 +590,9 @@ aside li {
 * routes/blog.$articlehandle.tsx
 * --------------------------------------------------
 */
+
+.article 
+
 .article img {
   height: auto;
   width: 100%;
